@@ -1,0 +1,105 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  align-items: center;
+  background: url(../images/11.jpg) no-repeat center;
+  background-size: cover;
+  padding: 40px;
+}
+
+.title {
+  color: #fff;
+  font-size: 40px;
+}
+
+.doors-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+.door-wrapper {
+  width: 33%;
+
+  /* position: relative; */
+}
+
+.door-wrapper.winning {
+  background-image: url(../images/car.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 20% center;
+  background-size: 80%;
+}
+
+.door {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, blur 0.2s ease-in-out;
+}
+
+.door.open {
+  transform: translateY(-70%);
+}
+
+.statistics {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 150px;
+}
+
+.backdrop {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.2s ease-in-out 0.5s, visability 0.2s ease-in-out 0.5s;
+}
+
+.backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  min-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.result {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 36px;
+  color: #333;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.try-again {
+  display: block;
+  padding: 10px 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: blanchedalmond;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}

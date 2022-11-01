@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Paradox</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Monty Hall Paradox</h1>
+      <p class="statistics">Your win rate: <span class="percent">?</span></p>
+      <div class="doors-wrapper">
+        <div class="door-wrapper">
+          <img class="door" src="./images/screen.svg" alt="" data-number="1" />
+        </div>
+        <div class="door-wrapper">
+          <img class="door" src="./images/screen.svg" alt="" data-number="2" />
+        </div>
+        <div class="door-wrapper">
+          <img class="door" src="./images/screen.svg" alt="" data-number="3" />
+        </div>
+      </div>
+
+      <div class="modal-wrapper">
+        <div class="backdrop">
+          <div class="modal">
+            <p class="result">GAME RESULT</p>
+            <button class="try-again" type="button">Try again</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
