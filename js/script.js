@@ -64,12 +64,12 @@ function finishGame(e) {
 
   if (e.target.closest('.door-wrapper').classList.contains('winning')) {
     staticsArr.push(1);
-    refs.resultRef.textContent = 'Ти виграв автомобіль :)';
+    refs.resultRef.textContent = 'Вітаю, ти виграв автомобіль :)';
     refs.imageRef.src = './images/car.svg';
   } else {
     staticsArr.push(0);
-    refs.resultRef.textContent = 'Ти програв, тому тримай цукерку :(';
-    refs.imageRef.src = './images/candy.svg';
+    refs.resultRef.textContent = 'Нажаль, цього разу лише коза  :(';
+    refs.imageRef.src = './images/goat.svg';
   }
 
   const result = calcStatistics();
