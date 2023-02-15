@@ -8,7 +8,7 @@ const refs = {
   backdropRef: document.querySelector('.backdrop'),
 };
 
-const staticsArr = [];
+const sessionStatistics = [];
 
 function createRandomNumber() {
   return Math.floor(Math.random() * 3 + 1);
@@ -19,8 +19,8 @@ function toggleModal() {
 }
 
 function calcStatistics() {
-  const trueResults = staticsArr.filter(el => el === 1);
-  return ((trueResults.length / staticsArr.length) * 100).toFixed();
+  const winsQuantity = sessionStatistics.filter(el => el === 1);
+  return ((winsQuantity.length / sessionStatistics.length) * 100).toFixed();
 }
 
 function findRandomWrongDoor(door, number) {
@@ -63,11 +63,11 @@ function finishGame(e) {
   e.target.closest('.door-wrapper').classList.add('open');
 
   if (e.target.closest('.door-wrapper').classList.contains('winning')) {
-    staticsArr.push(1);
+    sessionStatistics.push(1);
     refs.resultRef.textContent = 'Вітаю, ти виграв автомобіль :)';
     refs.imageRef.src = './images/car.svg';
   } else {
-    staticsArr.push(0);
+    sessionStatistics.push(0);
     refs.resultRef.textContent = 'Нажаль, цього разу лише коза  :(';
     refs.imageRef.src = './images/goat.svg';
   }
